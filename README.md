@@ -1,8 +1,6 @@
 # book-search
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Rakuten API
+## Require
 
 This app use [Rakuten's book search API](https://webservice.rakuten.co.jp/documentation/books-book-search).  
 To get an app ID, you need to register your app.
