@@ -103,7 +103,6 @@ function generateURL() {
             <th>タイトル / 著者</th>
             <th>発売日</th>
             <th>ISBN</th>
-            <th>読書メーター</th>
           </tr>
         </thead>
         <tbody>
@@ -112,20 +111,17 @@ function generateURL() {
               <img :src="item.smallImageUrl" :alt="item.title" class="h-12" />
             </td>
             <td>
-              <p class="font-semibold text-gray-700">{{ item.title }}</p>
-              <p class="mt-1 text-xs">{{ item.author }}</p>
-            </td>
-            <td>{{ item.salesDate }}</td>
-            <td>{{ item.isbn }}</td>
-            <td>
               <a
                 :href="`https://bookmeter.com/search?keyword=${item.isbn}`"
                 class="text-blue-600 font-semibold"
                 target="_blank"
                 rel="noopener noreferrer"
-                >開く</a
+                >{{ item.title }}</a
               >
+              <p class="mt-1 text-xs">{{ item.author }}</p>
             </td>
+            <td>{{ item.salesDate }}</td>
+            <td>{{ item.isbn }}</td>
           </tr>
         </tbody>
       </table>
